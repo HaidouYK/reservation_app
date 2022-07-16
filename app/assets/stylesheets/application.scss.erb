@@ -1,0 +1,359 @@
+body {
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 180px;
+    box-sizing: border-box;
+    color: #333;
+    background-color: #fff;
+    margin: 0;
+    font-weight: 400;
+    text-align: left;
+}
+
+dl, ol, ul {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+body, p, ol, ul, td {
+    font-family: verdana, arial, helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+}
+
+ul {
+    list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.h1, h1 {
+    font-size: 2.5rem;
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+#error_explanation {
+    width: 450px;
+    border: 2px solid #ff0000;
+    padding: 7px 7px 0;
+    margin-bottom: 20px;
+    background-color: #f0f0f0;
+}
+
+#error_explanation h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px -7px 0;
+    background-color: #c00;
+    color: #fff;
+}
+
+#error_explanation ul li {
+    font-size: 12px;
+    list-style: square;
+}
+
+.alert {
+    position: relative;
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+}
+
+.notifications .alert {
+    background-color: #f35500;
+}
+
+.header {
+    width: 100%;
+    height: 70px;
+    padding: 4px 30px;
+    background-color: #000000;
+}
+
+article, aside, figcation, figure, footer, header, hgroup, main ,nav, section {
+    display: block;
+}
+
+.header-left-nav {
+    float: left;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #333333;
+}
+
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+
+.header-left-nav form {
+    display: inline-block;
+}
+
+.header-search {
+    position: relative;
+}
+
+.d-none {
+    display: none !important;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition:  border-color .15s
+            ease-in-out, box-shadow .15s
+        ease-in-out;
+}
+
+button, input, optgroup, select, textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+textarea {
+    overflow: auto;
+    resize: vertical;
+}
+
+button, input {
+    overflow: visible;
+}
+
+.header-left-nav .form-control {
+    width: 180px;
+    display: inline-block;
+    position: relative;
+    border-radius: 2px;
+    padding-left: 30px;
+}
+
+.fa, .fab, .fal, .far, .fas {
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+}
+
+.fa, .far, .fas {
+    font-family: "Font Awesome 5 Free";
+}
+
+.fa, .fas {
+    font-weight: 900;
+}
+
+.header i {
+    position: absolute;
+    top: 10px;
+    left: 8px;
+    font-size: 18px;
+}
+
+.fa-map-marker-alt:before {
+    content: "\f3c5";
+}
+
+.fa-search:before {
+    content: "\f002";
+}
+
+[type=button], [type=reset], [type=submit], button {
+    -webkit-appearance: button;
+}
+
+[type=button]:not(:disabled),
+[type=reset]:not(:disabled),
+[type=submit]:not(:disabled),
+button:not(:disabled) {
+    cursor: pointer;
+}
+
+.header-right-nav {
+    float: right;
+}
+
+.header .nav-item {
+    display: inline-block;
+    color: #fff;
+    font-size: 14px;
+}
+
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    color: #212529;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    transition: color .15s
+            ease-in-out, background-color .15s
+        ease-in-out, border-color .15s
+        ease-in-out, box-shadow .15s
+        ease-in-out;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #4a90e2 !important;
+    border-color: #007bff;
+}
+
+.mt-2, .my-2 {
+    margin-top: 0.5rem !important;
+}
+
+.mb-2, .my-2 {
+    margin-bottom: 0.5rem !important;
+}
+
+.mr-3, .mx-3 {
+    margin-right: 1rem !important;
+}
+
+.ml-3, .mx-3 {
+    margin-left: 1rem !important;
+}
+
+.btn-secondary {
+    color: #fff;
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+.p-1 {
+    padding: 0.25rem !important;
+}
+
+.host-icon {
+    width: 65px;
+    height: 65px;
+    object-fit: cover;
+    border-radius: 50px;
+}
+
+.header-nav-menu {
+    background-color: #fff;
+    border: 3px solid #f6f8f9;
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 10px;
+    padding: 15px;
+    z-index: 1000;
+}
+
+.header-nav-menu li {
+    line-height: 30px;
+    font-size: 16px;
+    padding: 3px 5px;
+}
+
+.notifications {
+    color: #fff;
+    text-align: center;
+}
+
+.notifications .notice {
+    background-color: #add8e6;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 180px;
+    margin-top: 64px;
+    padding-top: 90px;
+    background-color: #111;
+    box-sizing: border-box;
+    color: #fff;
+    text-align: center;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+@media (min-width: 576px) {
+    .d-sm-inline-block {
+        display: inline-block !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .d-lg-inline-block {
+        display: inline-block !important;
+    }
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import "./top.scss";
+@import "./users.scss";
+@import "./rooms.scss";
+@import "./reservations.scss";
+@import "./common.scss";
