@@ -1,0 +1,33 @@
+<div class="col-lg-2 user-nav user-nav-pc d-lg-block d-none">
+    <ul class="class_change">
+        <li>
+            <%= link_to "アカウント", users_account_path %>
+        </li>
+        <li>
+            <%= link_to "プロフィール", users_profile_path %>
+        </li>
+    </ul>
+</div>
+
+<div class="col-lg-2 user-nav user-nav-mobile d-lg-none">
+    <ul class="class_change">
+        <li>
+            <%= link_to "アカウント", users_account_path %>
+        </li>
+        <li>
+            <%= link_to "プロフィール", users_profile_path %>
+        </li>
+    </ul>
+</div>
+
+<script>
+href = location.href;
+
+var links = jQuery(".class_change > li > a");
+
+links.each(function (index, value) {
+  if (value.href == href) {
+    jQuery(".class_change").children("li").eq(index).addClass("active");
+  }
+});
+</script>

@@ -8,9 +8,98 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://kit.fontawesome.com/a5a6b5bf47.js" crossorigin="anonymous"></script>
   </head>
 
   <body>
+    <header class="header">
+      <div class="header-inner">
+        <div class="header-left-nav">
+          <%= link_to image_tag("logo.png", alt: "サイトのロゴ画像"), root_path %>
+
+          <%= form_with url: search_area_rooms_path, local: true, method: :get do |f| %>
+            <div class="header-search d-lg-inline-block d-none">
+              <%= f.text_field :search, placeholder: "エリア", class: "form-control" %>
+              <i class="fas fa-map-marker-alt">
+              </i>
+            </div>
+
+            <%= f.submit "", class: "d-none" %>
+          <% end %>
+
+          <%= form_with url: search_keyword_rooms_path, local: true, method: :get do |f| %>
+            <div class="header-search d-lg-inline-block d-none">
+              <%= f.text_field :search, placeholder: "キーワード", class: "form-control" %>
+              <i class="fas fa-search">
+              </i>
+            </div>
+
+            <%= f.submit "", class: "d-none" %>
+          <% end %>
+        </div>
+
+        <% if user_signed_in? %>
+          <div class="header-right-nav">
+            <div class="nav-item d-sm-inline-block d-none">
+              <%= current_user.user_name %>
+            </div>
+
+            <div class="nav-item">
+              <% if current_user.avatar.attached? %>
+                <%= image_tag current_user.avatar, class: "mx-3 p-1 host-icon nav-trigger", alt: "メニュー" %>
+              <% else %>
+                <%= image_tag "default_icon-9263fc59c414b7228d256fc178dcb22183561357950a68f5ad086ba7ee054974.jpeg", class: "mx-3 p-1 host-icon nav-trigger", alt: "メニュー" %>
+              <% end %>
+
+              <ul class="header-nav-menu">
+                <li>
+                  <%= link_to "ルーム登録", new_room_path %>
+                </li>
+                <li>
+                  <%= link_to "予約済みルーム一覧", reservations_path %>
+                </li>
+                <li>
+                  <%= link_to "登録済みルーム一覧", posts_rooms_path %>
+                </li>
+                <li>
+                  <%= link_to "設定", users_account_path %>
+                </li>
+                <li>
+                  <%= link_to "ログアウト", destroy_user_session_path, rel: "nofollow", method: :delete %>
+                </li>
+              </ul>
+            </div>
+          </div>
+        <% else %>
+          <div class="header-right-nav">
+            <div class="nav-item">
+              <%= link_to "ログイン", new_user_session_path, class: "btn btn-primary my-2 mx-3" %>
+              <%= link_to "登録する", new_user_registration_path, class: "btn btn-secondary" %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </header>
+
+    <div class="clearfix"></div>
+
+    <script>
+      $(function(){
+        $('.nav-trigger').click(function(){
+          $('.header-nav-menu').toggle();
+        })
+      });
+    </script>
+
+    <div class="notifications">
+      <% flash.each do |key, value| %>
+        <%= content_tag(:div, value, class: "#{key}") %>
+      <% end %>
+    </div>
     <%= yield %>
+    
+    <footer class="footer">
+      <p>©️ 2020 POTEPAN.INC.</p>
+    </footer>
   </body>
 </html>

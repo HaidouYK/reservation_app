@@ -1,0 +1,263 @@
+// Place all the styles related to the Users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.device {
+    padding-top: 36px;
+    font-size: 16px;
+}
+
+.device_frame {
+    max-width: 600px;
+    text-align: center;
+    padding: 24px;
+    margin: 0px auto;
+    background-color: #ffffff;
+    border-radius: 4px;
+    box-shadow: 0px 1px 3px 0px rgba(21,27,38,0.15);
+}
+
+.mt-4, .my-4 {
+    margin-top: 1.5rem !important;
+}
+
+.device p {
+    font-size: 16px;
+}
+
+.device_inner {
+    width: 360px;
+    margin: 0px auto;
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -5px;
+    margin-left: -5px;
+}
+
+div.field, div.actions {
+    margin-bottom: 10px;
+}
+
+.col-2 {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    flex: 0 0 16.666667%;
+    max-width: 16.666667%;
+}
+
+.pt-2, .py-2 {
+    padding-top: 0.5rem !important;
+}
+
+.form-row>.col, .form-row>[class*=col-] {
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.required-b::before {
+    content: "必須";
+    color: #fff;
+    background-color: #ff0000a8;
+    font-size: 12px;
+    border-radius: 5px;
+    padding: 4px;
+    margin: 0 5px;
+}
+
+.col-10 {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    flex: 0 0 83.333333%;
+    max-width: 83.333333%;
+}
+
+.pr-2, .px-2 {
+    padding-right: 0.5rem !important;
+}
+
+.pl-2, .px-2 {
+    padding-left: 0.5rem !important;
+}
+
+.device a {
+    color: #007bff !important;
+}
+
+.user {
+    width: 100%;
+}
+
+.user .user-nav {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 30px 15px;
+}
+
+.user .user-nav-pc {
+    height: 100vh;
+}
+
+.user .user-nav li {
+    font-size: 18px;
+    padding: 10px;
+}
+
+.user .user-nav li a:hover {
+    color: #4a90e2;
+    text-decoration: none;
+}
+
+.class_change>li.active {
+    border-right: 3px solid #4a90e2;
+}
+
+.class_change>li.active>a {
+    color: #4a90e2;
+}
+
+.user .user-nav-mobile {
+    height: auto;
+}
+
+.user .user-nav-mobile li {
+    float: left;
+}
+
+.user-nav-mobile>.class_change>li.active {
+    border-bottom: 3px solid #4a90e2;
+}
+
+.user-nav-mobile>.class_change>li.active>a {
+    color: #4a90e2;
+}
+
+.user .user-view {
+    background-color: #f6f8f9;
+    border-left: 2px solid #e2e2e2;
+}
+
+.user .user-view-box {
+    max-width: 880px;
+    background-color: #fff;
+    border: 1px solid #eaedef;
+    margin: 30px auto;
+}
+
+.user .update-content {
+    border-bottom: 1px solid #eaedef;
+    padding: 20px;
+    margin: 0 15px;
+    font-size: 16px;
+}
+
+.h5, h5 {
+    font-size: 1.25rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.field_with_errors {
+    padding: 2px;
+    background-color: #ff0000;
+    display: table;
+}
+
+.user .update-content label {
+    font-weight: bold;
+}
+
+.user .update-content label {
+    font-weight: bold;
+}
+
+.required-a::after {
+    content: "必須";
+    color: #fff;
+    background-color: #ff0000a8;
+    font-size: 12px;
+    border-radius: 5px;
+    padding: 4px;
+    margin: 0 5px;
+}
+
+.mb-4, .my-4 {
+    margin-bottom: 1.5rem !important;
+}
+
+.mt-4, .my-4 {
+    margin-top: 1.5rem !important;
+}
+
+textarea.form-control {
+    height: auto;
+}
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.h2, h2 {
+    font-size: 2rem;
+}
+
+.mb-3, .my-3 {
+    margin-bottom: 1rem !important;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.btn-outline-secondary {
+    border-color: #6c757d;
+}
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .offset-md-3 {
+        margin-left: 25%;
+    }
+
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .d-lg-block {
+        display: block !important;
+    }
+
+    .d-lg-none {
+        display: none !important;
+    }
+
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
