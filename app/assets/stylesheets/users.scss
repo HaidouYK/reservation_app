@@ -74,9 +74,6 @@ div.field, div.actions {
     width: 100%;
     padding-right: 15px;
     padding-left: 15px;
-}
-
-.col-10 {
     flex: 0 0 83.333333%;
     max-width: 83.333333%;
 }
@@ -95,13 +92,6 @@ div.field, div.actions {
 
 .user {
     width: 100%;
-}
-
-.col-lg-2 {
-    position: relative;
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
 }
 
 .user .user-nav {
@@ -148,13 +138,6 @@ div.field, div.actions {
     color: #4a90e2;
 }
 
-.col-md-10 {
-    position: relative;
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-}
-
 .user .user-view {
     background-color: #f6f8f9;
     border-left: 2px solid #e2e2e2;
@@ -183,13 +166,6 @@ label {
     margin-bottom: 0.5rem;
 }
 
-.col-md-3 {
-    position: relative;
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-}
-
 .field_with_errors {
     padding: 2px;
     background-color: #ff0000;
@@ -198,32 +174,6 @@ label {
 
 .user .update-content label {
     font-weight: bold;
-}
-
-.col-md-9 {
-    position: relative;
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-}
-
-.col-md-2 {
-    position: relative;
-    width: 100%;
-}
-
-.col-lg-10 {
-    position: relative;
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-}
-
-.col-md-6 {
-    position: relative;
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
 }
 
 .user .update-content label {
@@ -283,31 +233,6 @@ textarea.form-control {
 }
 
 @media (min-width: 768px) {
-    .col-md-10 {
-        flex: 0 0 83.333333%;
-        max-width: 83.333333%;
-    }
-
-    .col-md-3 {
-        flex: 0 0 25%;
-        max-width: 25%;
-    }
-
-    .col-md-9 {
-        flex: 0 0 75%;
-        max-width: 75%;
-    }
-
-    .col-md-2 {
-        flex: 0 0 16.666667%;
-        max-width: 16.666667%;
-    }
-
-    .col-md-6 {
-        flex: 0 0 50%;
-        max-width: 50%;
-    }
-
     .offset-md-3 {
         margin-left: 25%;
     }
@@ -318,22 +243,12 @@ textarea.form-control {
 }
 
 @media (min-width: 992px) {
-    .col-lg-2 {
-        flex: 0 0 16.666667%;
-        max-width: 16.666667%;
-    }
-
     .d-lg-block {
         display: block !important;
     }
 
     .d-lg-none {
         display: none !important;
-    }
-
-    .col-lg-10 {
-        flex: 0 0 83.333333%;
-        max-width: 83.333333%;
     }
 
     .container {

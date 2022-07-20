@@ -19,22 +19,22 @@
 
           <%= form_with url: search_area_rooms_path, local: true, method: :get do |f| %>
             <div class="header-search d-lg-inline-block d-none">
-              <%= f.text_field :keyword, placeholder: "エリア", class: "form-control" %>
+              <%= f.text_field :search, placeholder: "エリア", class: "form-control" %>
               <i class="fas fa-map-marker-alt">
               </i>
             </div>
 
-            <%= f.submit class: "d-none" %>
+            <%= f.submit "", class: "d-none" %>
           <% end %>
 
           <%= form_with url: search_keyword_rooms_path, local: true, method: :get do |f| %>
             <div class="header-search d-lg-inline-block d-none">
-              <%= f.text_field :keyword, placeholder: "キーワード", class: "form-control" %>
+              <%= f.text_field :search, placeholder: "キーワード", class: "form-control" %>
               <i class="fas fa-search">
               </i>
             </div>
 
-            <%= f.submit class: "d-none" %>
+            <%= f.submit "", class: "d-none" %>
           <% end %>
         </div>
 

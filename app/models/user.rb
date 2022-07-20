@@ -5,8 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   validates :user_name, presence: true
-  validates :user_profile, presence: true, length: {maximum: 500}, on: :profile
-  validates_associated :avatar, presence: true, on: :profile
+  validates :user_profile, presence: true, length: {maximum: 500}, on: :update
+  validates_associated :avatar, presence: true, on: :update
 
   has_one_attached :avatar
   has_many :rooms

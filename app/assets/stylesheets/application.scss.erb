@@ -1,3 +1,7 @@
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
 body {
     position: relative;
     min-height: 100vh;
@@ -25,6 +29,10 @@ ul {
     list-style: none;
 }
 
+article, aside, figcation, figure, footer, header, hgroup, main ,nav, section {
+    display: block;
+}
+
 h1, h2, h3, h4, h5, h6 {
     margin-top: 0;
     margin-bottom: 0.5rem;
@@ -40,8 +48,58 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 2.5rem;
 }
 
-*, ::after, ::before {
-    box-sizing: border-box;
+a {
+    color: #000;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #333333;
+}
+
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+
+button, input, optgroup, select, textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+textarea {
+    overflow: auto;
+    resize: vertical;
+}
+
+button, input {
+    overflow: visible;
+}
+
+.d-none {
+    display: none !important;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition:  border-color .15s
+            ease-in-out, box-shadow .15s
+        ease-in-out;
 }
 
 #error_explanation {
@@ -84,30 +142,24 @@ h1, h2, h3, h4, h5, h6 {
     height: 70px;
     padding: 4px 30px;
     background-color: #000000;
-}
 
-article, aside, figcation, figure, footer, header, hgroup, main ,nav, section {
-    display: block;
+    .nav-item {
+        display: inline-block;
+        color: #fff;
+        font-size: 14px;
+    }
 }
 
 .header-left-nav {
     float: left;
-}
 
-a {
-    color: #000;
-    text-decoration: none;
-    background-color: transparent;
-}
-
-a:hover {
-    text-decoration: none;
-    color: #333333;
-}
-
-img {
-    vertical-align: middle;
-    border-style: none;
+    .form-control {
+        width: 180px;
+        display: inline-block;
+        position: relative;
+        border-radius: 2px;
+        padding-left: 30px;
+    }
 }
 
 .header-left-nav form {
@@ -116,52 +168,6 @@ img {
 
 .header-search {
     position: relative;
-}
-
-.d-none {
-    display: none !important;
-}
-
-.form-control {
-    display: block;
-    width: 100%;
-    height: calc(1.5em + 0.75rem + 2px);
-    padding: 0.375rem 0.75rem;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #495057;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 1px solid #ced4da;
-    border-radius: 0.25rem;
-    transition:  border-color .15s
-            ease-in-out, box-shadow .15s
-        ease-in-out;
-}
-
-button, input, optgroup, select, textarea {
-    margin: 0;
-    font-family: inherit;
-    font-size: inherit;
-    line-height: inherit;
-}
-
-textarea {
-    overflow: auto;
-    resize: vertical;
-}
-
-button, input {
-    overflow: visible;
-}
-
-.header-left-nav .form-control {
-    width: 180px;
-    display: inline-block;
-    position: relative;
-    border-radius: 2px;
-    padding-left: 30px;
 }
 
 .fa, .fab, .fal, .far, .fas {
@@ -207,14 +213,13 @@ button:not(:disabled) {
     cursor: pointer;
 }
 
-.header-right-nav {
-    float: right;
+input[type=date], input[type=datetime-local],
+input[type=month], input[type=time] {
+    -webkit-appearance: listbox;
 }
 
-.header .nav-item {
-    display: inline-block;
-    color: #fff;
-    font-size: 14px;
+.header-right-nav {
+    float: right;
 }
 
 .btn {
@@ -352,8 +357,8 @@ p {
  *= require_self
  */
 
+@import "./common.scss";
 @import "./top.scss";
 @import "./users.scss";
 @import "./rooms.scss";
 @import "./reservations.scss";
-@import "./common.scss";

@@ -9,7 +9,7 @@ class UsersController < ApplicationController
   def update
     @user = User.find(current_user.id)
     if @user.update(user_params)
-      redirect_to request.referer
+      redirect_to request.referer, notice: "Profile was successfully updated."
     else
       render :profile
     end
